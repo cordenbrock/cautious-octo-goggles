@@ -9,12 +9,6 @@ import getVisibleExpenses from './selectors/expenses';
 
 
 const store = configStore();
-
-store.dispatch(addExpense( {description: 'bribe', amount: 200} ))
-store.dispatch(addExpense( {description: 'booze', amount: 50, createdAt: 5} ))
-
-
-
 const state = store.getState();
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
 console.log(visibleExpenses);
